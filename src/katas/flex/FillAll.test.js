@@ -29,7 +29,10 @@ const FillAll = (props)=>{
 //
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: colors[0],
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   text:{
     color: 'white',
@@ -43,4 +46,3 @@ const styles = StyleSheet.create({
 
 FillAll.displayName = 'FillAll'
 export default FillAll
-
