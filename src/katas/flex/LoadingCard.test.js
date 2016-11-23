@@ -23,9 +23,9 @@ import colors from '@/runner/colors'
 const LoadingCard= (props)=>{
   return (
     <View style={styles.container}>
-      <View style={{width:200, height: 80, backgroundColor:'#CDDC39',padding:10, paddingTop:5}}>
+      <View style={{width:200, height: 80, backgroundColor:'#CDDC39',padding:10, paddingTop:5, flexDirection: 'row'}}>
         <Icon style={styles.text} name='ios-time-outline' size={22} />
-        <Text style={[styles.text,{}]}>Loading...</Text>
+        <Text style={[styles.text,{flex:1, alignSelf: 'center'}]}>Loading...</Text>
         <Icon style={styles.text} name='ios-close-outline' size={22} />
       </View>
     </View>
@@ -41,8 +41,10 @@ const styles = StyleSheet.create({
     justifyContent:'center',
   },
   text:{
+    // flex: 1 was removed. This causes icons to be centered in their own flexboxes making them offset.
+    // alignSelf was used to center the Text element itself. alignItems is used to position items within a container.
     color: 'white',
-    textAlign:'center'
+    textAlign:'center',
   }
 });
 
@@ -52,4 +54,3 @@ const styles = StyleSheet.create({
 
 LoadingCard.displayName = 'LoadingCard'
 export default LoadingCard
-
