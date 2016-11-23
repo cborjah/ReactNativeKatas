@@ -29,7 +29,7 @@ const FillAll = (props)=>{
 //
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, // Fills all available space, shared evenly amongst each other components with the same parent.
     backgroundColor: colors[0],
     alignItems: 'center',
     justifyContent: 'center'
