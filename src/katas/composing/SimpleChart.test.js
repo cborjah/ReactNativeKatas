@@ -20,7 +20,7 @@ const Bar = (props)=>{
   const ratio = props.val/max
   return(
     <View>
-      <View style={{flex:(1-ratio), backgroundColor: 'white'}}/>
+      <View style={{flex:(1-ratio)}}/>
       <View style={[ styles.bar, {flex: ratio}]}/>
     </View>
   )
